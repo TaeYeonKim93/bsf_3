@@ -36,13 +36,13 @@
                 <v-list>
                     <v-list-item
                         class="px-2"
-                        key=""
-                        to="//"
+                        key="aiModels"
+                        to="/aimodels/aiModels"
                         @click="changeUrl()"
                         color="primary"
                         style="font-weight:700;"
                     >
-                        
+                        AiModel
                     </v-list-item>
 
 
@@ -60,24 +60,24 @@
 
                     <v-list-item
                         class="px-2"
-                        key=""
-                        to="//"
+                        key="riskData"
+                        to="/modeldata/riskData"
                         @click="changeUrl()"
                         color="primary"
                         style="font-weight:700;"
                     >
-                        
+                        RiskData
                     </v-list-item>
 
                     <v-list-item
                         class="px-2"
-                        key=""
-                        to="//"
+                        key="srcData"
+                        to="/modeldata/srcData"
                         @click="changeUrl()"
                         color="primary"
                         style="font-weight:700;"
                     >
-                        
+                        SrcData
                     </v-list-item>
 
 
@@ -185,10 +185,10 @@ export default {
         ImageUrl: '',
         aggregate: [
             { 
-                title: '', 
+                title: 'AiModel', 
                 description: '', 
-                key: '', 
-                route: '//',
+                key: 'aiModels', 
+                route: '/aimodels/aiModels',
                 ImageUrl: '',
             },
             { 
@@ -199,17 +199,17 @@ export default {
                 ImageUrl: '',
             },
             { 
-                title: '', 
+                title: 'RiskData', 
                 description: '', 
-                key: '', 
-                route: '//',
+                key: 'riskData', 
+                route: '/modeldata/riskData',
                 ImageUrl: '',
             },
             { 
-                title: '', 
+                title: 'SrcData', 
                 description: '', 
-                key: '', 
-                route: '//',
+                key: 'srcData', 
+                route: '/modeldata/srcData',
                 ImageUrl: '',
             },
             { 

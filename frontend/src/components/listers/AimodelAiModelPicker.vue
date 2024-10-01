@@ -33,7 +33,7 @@
                                 IsLastestVersion :  {{item.isLastestVersion }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                TrainingCompleteTime :  {{item.trainingCompleteTime }}
+                                TrainCompTime :  {{item.trainCompTime }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
                                 Performance :  {{item.performance }}

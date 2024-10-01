@@ -24,7 +24,7 @@
                 <Boolean label="IsLastestVersion" v-model="item.isLastestVersion" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <Date label="TrainingCompleteTime" v-model="item.trainingCompleteTime" :editMode="editMode" @change="change" />
+                <Date label="TrainCompTime" v-model="item.trainCompTime" :editMode="editMode" @change="change" />
             </div>
             <div>
                 <String label="Performance" v-model="item.performance" :editMode="editMode" @change="change" />

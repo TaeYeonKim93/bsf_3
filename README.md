@@ -1,7 +1,7 @@
 # 
 
 ## Model
-www.msaez.io/#/54400278/storming/bsf_3
+www.msaez.io/#/54400278/storming/bsf_4
 
 ## Before Running Services
 ### Make sure there is a Kafka server running
@@ -22,7 +22,7 @@ See the README.md files inside the each microservices directory:
 
 - aimodel
 - map
-- data
+- modeldata
 - statistic
 - summary
 - dashboard
@@ -37,16 +37,16 @@ mvn spring-boot:run
 ## Test by API
 - aimodel
 ```
- http :8088/ 
+ http :8088/aiModels id="id" modelId="modelId" modelName="modelName" status="status" modelPath="modelPath" modelVersion="modelVersion" isLastestVersion="isLastestVersion" trainCompTime="trainCompTime" performance="performance" 
 ```
 - map
 ```
  http :8088/maps id="id" mapId="mapId" dataType="dataType" geoData="geoData" 
 ```
-- data
+- modeldata
 ```
- http :8088/ 
- http :8088/ 
+ http :8088/riskData id="id" dataId="dataId" dataType="dataType" size="size" createAt="createAt" dataValue="dataValue" analyzeResult="analyzeResult" 
+ http :8088/srcData id="id" dataId="dataId" dataType="dataType" size="size" createAt="createAt" dataValue="dataValue" 
 ```
 - statistic
 ```

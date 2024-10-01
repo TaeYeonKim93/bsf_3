@@ -1,6 +1,8 @@
 package bsf.domain;
 
 import bsf.MapApplication;
+import bsf.domain.MapCreated;
+import bsf.domain.MapUpdated;
 import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
@@ -22,6 +24,15 @@ public class Map {
     private String dataType;
 
     private String geoData;
+
+    @PostPersist
+    public void onPostPersist() {
+        MapUpdated mapUpdated = new MapUpdated(this);
+        mapUpdated.publishAfterCommit();
+
+        MapCreated mapCreated = new MapCreated(this);
+        mapCreated.publishAfterCommit();
+    }
 
     public static MapRepository repository() {
         MapRepository mapRepository = MapApplication.applicationContext.getBean(

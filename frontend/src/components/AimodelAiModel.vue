@@ -22,7 +22,7 @@
             <String label="ModelPath" v-model="value.modelPath" :editMode="editMode" :inputUI="''"/>
             <String label="ModelVersion" v-model="value.modelVersion" :editMode="editMode" :inputUI="''"/>
             <Boolean label="IsLastestVersion" v-model="value.isLastestVersion" :editMode="editMode" :inputUI="''"/>
-            <Date label="TrainingCompleteTime" v-model="value.trainingCompleteTime" :editMode="editMode" :inputUI="''"/>
+            <Date label="TrainCompTime" v-model="value.trainCompTime" :editMode="editMode" :inputUI="''"/>
             <String label="Performance" v-model="value.performance" :editMode="editMode" :inputUI="''"/>
         </v-card-text>
 

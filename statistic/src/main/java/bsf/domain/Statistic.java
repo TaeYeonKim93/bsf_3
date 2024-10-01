@@ -1,6 +1,7 @@
 package bsf.domain;
 
 import bsf.StatisticApplication;
+import bsf.domain.StatisticUpdated;
 import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
@@ -24,6 +25,12 @@ public class Statistic {
     private Long period;
 
     private Long value;
+
+    @PostPersist
+    public void onPostPersist() {
+        StatisticUpdated statisticUpdated = new StatisticUpdated(this);
+        statisticUpdated.publishAfterCommit();
+    }
 
     public static StatisticRepository repository() {
         StatisticRepository statisticRepository = StatisticApplication.applicationContext.getBean(

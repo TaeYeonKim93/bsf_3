@@ -1,6 +1,7 @@
 package bsf.domain;
 
 import bsf.SummaryApplication;
+import bsf.domain.SummaryCreated;
 import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
@@ -22,6 +23,12 @@ public class Summary {
     private String dataType;
 
     private String content;
+
+    @PostPersist
+    public void onPostPersist() {
+        SummaryCreated summaryCreated = new SummaryCreated(this);
+        summaryCreated.publishAfterCommit();
+    }
 
     public static SummaryRepository repository() {
         SummaryRepository summaryRepository = SummaryApplication.applicationContext.getBean(

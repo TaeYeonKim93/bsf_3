@@ -110,7 +110,7 @@
                 'modelPath': '',
                 'modelVersion': '',
                 'isLastestVersion': false,
-                'trainingCompleteTime': '2024-10-01',
+                'trainCompTime': '2024-10-01',
                 'performance': '',
             }
         },
