@@ -1,6 +1,10 @@
 package bsf.domain;
 
 import bsf.AimodelApplication;
+import bsf.domain.AiModelAnalyzed;
+import bsf.domain.AiModelCreated;
+import bsf.domain.AiModelDeployed;
+import bsf.domain.AiModelTrained;
 import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
@@ -29,9 +33,24 @@ public class AiModel {
 
     private Boolean isLastestVersion;
 
-    private Date trainingCompleteTime;
+    private Date trainCompTime;
 
     private String performance;
+
+    @PostPersist
+    public void onPostPersist() {
+        AiModelAnalyzed aiModelAnalyzed = new AiModelAnalyzed(this);
+        aiModelAnalyzed.publishAfterCommit();
+
+        AiModelDeployed aiModelDeployed = new AiModelDeployed(this);
+        aiModelDeployed.publishAfterCommit();
+
+        AiModelCreated aiModelCreated = new AiModelCreated(this);
+        aiModelCreated.publishAfterCommit();
+
+        AiModelTrained aiModelTrained = new AiModelTrained(this);
+        aiModelTrained.publishAfterCommit();
+    }
 
     public static AiModelRepository repository() {
         AiModelRepository aiModelRepository = AimodelApplication.applicationContext.getBean(

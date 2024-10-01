@@ -45,13 +45,13 @@ services:
       - SPRING_PROFILES_ACTIVE=docker
     command: mvn spring-boot:run
     ports:
-      - 0:0
+      - 8083:8083
     working_dir: /usr/src
     volumes:
       - ./map:/usr/src
       - ./maven-repo:/root/.m2
       
-  data:
+  modeldata:
     depends_on: 
       - kafka
     image: adoptopenjdk/maven-openjdk11:latest
@@ -59,10 +59,10 @@ services:
       - SPRING_PROFILES_ACTIVE=docker
     command: mvn spring-boot:run
     ports:
-      - 0:0
+      - 8084:8084
     working_dir: /usr/src
     volumes:
-      - ./data:/usr/src
+      - ./modeldata:/usr/src
       - ./maven-repo:/root/.m2
       
   statistic:
@@ -73,7 +73,7 @@ services:
       - SPRING_PROFILES_ACTIVE=docker
     command: mvn spring-boot:run
     ports:
-      - 0:0
+      - 8085:8085
     working_dir: /usr/src
     volumes:
       - ./statistic:/usr/src
@@ -87,7 +87,7 @@ services:
       - SPRING_PROFILES_ACTIVE=docker
     command: mvn spring-boot:run
     ports:
-      - 0:0
+      - 8086:8086
     working_dir: /usr/src
     volumes:
       - ./summary:/usr/src
@@ -101,7 +101,7 @@ services:
       - SPRING_PROFILES_ACTIVE=docker
     command: mvn spring-boot:run
     ports:
-      - 0:0
+      - 8087:8087
     working_dir: /usr/src
     volumes:
       - ./dashboard:/usr/src

@@ -5,16 +5,16 @@ import Router from 'vue-router'
 Vue.use(Router);
 
 
-import Manager from "./components/listers/Cards"
-import Detail from "./components/listers/Detail"
+import AimodelAiModelManager from "./components/listers/AimodelAiModelCards"
+import AimodelAiModelDetail from "./components/listers/AimodelAiModelDetail"
 
 import MapMapManager from "./components/listers/MapMapCards"
 import MapMapDetail from "./components/listers/MapMapDetail"
 
-import Manager from "./components/listers/Cards"
-import Detail from "./components/listers/Detail"
-import Manager from "./components/listers/Cards"
-import Detail from "./components/listers/Detail"
+import ModeldataRiskDataManager from "./components/listers/ModeldataRiskDataCards"
+import ModeldataRiskDataDetail from "./components/listers/ModeldataRiskDataDetail"
+import ModeldataSrcDataManager from "./components/listers/ModeldataSrcDataCards"
+import ModeldataSrcDataDetail from "./components/listers/ModeldataSrcDataDetail"
 
 import StatisticStatisticManager from "./components/listers/StatisticStatisticCards"
 import StatisticStatisticDetail from "./components/listers/StatisticStatisticDetail"
@@ -29,14 +29,14 @@ export default new Router({
     base: process.env.BASE_URL,
     routes: [
             {
-                path: '//',
-                name: 'Manager',
-                component: Manager
+                path: '/aimodels/aiModels',
+                name: 'AimodelAiModelManager',
+                component: AimodelAiModelManager
             },
             {
-                path: '///:id',
-                name: 'Detail',
-                component: Detail
+                path: '/aimodels/aiModels/:id',
+                name: 'AimodelAiModelDetail',
+                component: AimodelAiModelDetail
             },
 
             {
@@ -51,24 +51,24 @@ export default new Router({
             },
 
             {
-                path: '//',
-                name: 'Manager',
-                component: Manager
+                path: '/modeldata/riskData',
+                name: 'ModeldataRiskDataManager',
+                component: ModeldataRiskDataManager
             },
             {
-                path: '///:id',
-                name: 'Detail',
-                component: Detail
+                path: '/modeldata/riskData/:id',
+                name: 'ModeldataRiskDataDetail',
+                component: ModeldataRiskDataDetail
             },
             {
-                path: '//',
-                name: 'Manager',
-                component: Manager
+                path: '/modeldata/srcData',
+                name: 'ModeldataSrcDataManager',
+                component: ModeldataSrcDataManager
             },
             {
-                path: '///:id',
-                name: 'Detail',
-                component: Detail
+                path: '/modeldata/srcData/:id',
+                name: 'ModeldataSrcDataDetail',
+                component: ModeldataSrcDataDetail
             },
 
             {

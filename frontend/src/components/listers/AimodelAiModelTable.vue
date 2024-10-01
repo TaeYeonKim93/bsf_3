@@ -73,7 +73,7 @@
                     { text: "modelPath", value: "modelPath" },
                     { text: "modelVersion", value: "modelVersion" },
                     { text: "isLastestVersion", value: "isLastestVersion" },
-                    { text: "trainingCompleteTime", value: "trainingCompleteTime" },
+                    { text: "trainCompTime", value: "trainCompTime" },
                     { text: "performance", value: "performance" },
                 ],
             aiModel : [],
@@ -98,7 +98,7 @@
                 'modelPath': '',
                 'modelVersion': '',
                 'isLastestVersion': false,
-                'trainingCompleteTime': '2024-10-01',
+                'trainCompTime': '2024-10-01',
                 'performance': '',
             }
         },

@@ -59,7 +59,7 @@
                             [ ModelPath :  {{data.modelPath }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ ModelVersion :  {{data.modelVersion }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ IsLastestVersion :  {{data.isLastestVersion }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ TrainingCompleteTime :  {{data.trainingCompleteTime }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ TrainCompTime :  {{data.trainCompTime }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Performance :  {{data.performance }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </v-list-item-subtitle>
 
@@ -134,7 +134,7 @@
                 'modelPath': '',
                 'modelVersion': '',
                 'isLastestVersion': false,
-                'trainingCompleteTime': '2024-10-01',
+                'trainCompTime': '2024-10-01',
                 'performance': '',
             }
         },

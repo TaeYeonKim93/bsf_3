@@ -31,7 +31,7 @@ jobs:
         run: |
           mvn clean package -f ./aimodel/pom.xml
           mvn clean package -f ./map/pom.xml
-          mvn clean package -f ./data/pom.xml
+          mvn clean package -f ./modeldata/pom.xml
           mvn clean package -f ./statistic/pom.xml
           mvn clean package -f ./summary/pom.xml
           mvn clean package -f ./dashboard/pom.xml
@@ -56,15 +56,15 @@ jobs:
             ghcr.io/${{ github.repository }}/map:latest
             ghcr.io/${{ github.repository }}/map:${{ github.ref_name }}
             
-      - name: Docker Build and push for Data
+      - name: Docker Build and push for Modeldata
         uses: docker/build-push-action@v4
         with:
-          context: ./data
+          context: ./modeldata
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ghcr.io/${{ github.repository }}/data:latest
-            ghcr.io/${{ github.repository }}/data:${{ github.ref_name }}
+            ghcr.io/${{ github.repository }}/modeldata:latest
+            ghcr.io/${{ github.repository }}/modeldata:${{ github.ref_name }}
             
       - name: Docker Build and push for Statistic
         uses: docker/build-push-action@v4

@@ -1,15 +1,14 @@
 package bsf.domain;
 
+import bsf.domain.*;
 import java.util.Date;
 import java.util.List;
-
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.Query;
-import bsf.domain.*;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 //<<< PoEAA / Repository
-@RepositoryRestResource(collectionResourceRel="aiModels", path="aiModels")
-public interface AiModelRepository extends PagingAndSortingRepository<AiModel, >{
-}
+@RepositoryRestResource(collectionResourceRel = "aiModels", path = "aiModels")
+public interface AiModelRepository
+    extends PagingAndSortingRepository<AiModel, Long> {}

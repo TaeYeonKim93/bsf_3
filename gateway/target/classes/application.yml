@@ -12,25 +12,25 @@ spring:
         - id: aimodel
           uri: http://localhost:8082
           predicates:
-            - Path=/undefined/**, 
+            - Path=/aiModels/**, 
         - id: map
-          uri: http://localhost:0
+          uri: http://localhost:8083
           predicates:
             - Path=/maps/**, 
-        - id: data
-          uri: http://localhost:0
+        - id: modeldata
+          uri: http://localhost:8084
           predicates:
-            - Path=/undefined/**, /undefined/**, 
+            - Path=/riskData/**, /srcData/**, 
         - id: statistic
-          uri: http://localhost:0
+          uri: http://localhost:8085
           predicates:
             - Path=/statistics/**, 
         - id: summary
-          uri: http://localhost:0
+          uri: http://localhost:8086
           predicates:
             - Path=/summaries/**, 
         - id: dashboard
-          uri: http://localhost:0
+          uri: http://localhost:8087
           predicates:
             - Path=, 
         - id: frontend
@@ -60,15 +60,15 @@ spring:
         - id: aimodel
           uri: http://aimodel:8080
           predicates:
-            - Path=/undefined/**, 
+            - Path=/aiModels/**, 
         - id: map
           uri: http://map:8080
           predicates:
             - Path=/maps/**, 
-        - id: data
-          uri: http://data:8080
+        - id: modeldata
+          uri: http://modeldata:8080
           predicates:
-            - Path=/undefined/**, /undefined/**, 
+            - Path=/riskData/**, /srcData/**, 
         - id: statistic
           uri: http://statistic:8080
           predicates:
